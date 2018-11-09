@@ -1,0 +1,95 @@
+/*simple loops demo
+16.10.2018
+*/
+
+import java.util.*;
+
+
+public class myDemo{
+  public static void main (String[] args){
+	
+
+             <font color="green">//1.  simple loops where counter is not used in the body of the loop</font>
+        System.out.print("\n----1.  simple loops where counters are not used in the body----------\n\n");	
+        <font color="green">// print Hi 4 times</font>
+        for (int i = 0; i&lt 4;  i++) {
+            System.out.print( "Hi"  + " " );
+        }
+        System.out.println();
+		
+        <font color="green">// print a line of stars</font>
+        for (int i = 0; i&lt 40;  i++) {
+            System.out.print("*" );
+        }
+        System.out.println();
+		
+		<font color="green">// print a dash word for hangman application</font>
+        String word="", dashWord="";
+        int len=0;
+	
+        Scanner sc = new Scanner(System.in); 
+        System.out.println("Enter a word:");
+        word=sc.nextLine();
+        len = word.length();     
+        for (int i = 0; i&lt len;  i++) {
+            dashWord+= "-";
+        }
+        System.out.print("Word so far is: " + dashWord );
+        System.out.println();
+		
+		
+		
+            <font color="green">//2.  simple loops where counter is used in the body of the loop</font>
+        System.out.print("\n----2.  simple loops where counters are used in the body----------\n\n");	
+        <font color="green">// print a multiplication table for 8</font>
+		
+        for (int i = 0; i&lt10 ;  i++) {
+            System.out.println(i +" X 8 = " + i*8 );
+        }
+        System.out.println();
+		
+		<font color="green">// print all letters of a word in a separate lines</font>
+        for (int i = 0; i&ltlen ;  i++) {
+            System.out.println(word.charAt(i));	
+        }
+        System.out.println();
+		
+		
+		
+		    <font color="green">//3.  simple loops where accumulators are used</font> 
+        System.out.print("\n----3.  simple loops where accumulators are used----------\n\n");	
+        <font color="green">// print a sum of 5+10+15+....+100</font>
+        int sum=0;
+        for (int i = 5; i&lt=100 ;  i=i+5) {
+            sum=sum+i;
+        }
+        System.out.print("sum of 5+10+15+....+100 is: "+ sum);
+        System.out.println();
+		
+		
+		<font color="green">// print a factorial 7!=1*2*3*4*5*6*7</font>
+        int factorial = 1;
+        for (int i = 1; i&lt=7 ;  i++) {
+            factorial *= i;
+        }
+        System.out.print("7!=1*2*3*4*5*....*7 =" + factorial);
+        System.out.println();
+		
+		<font color="green">// print an average of the numbers entered</font>
+        int mark=0;
+        int cnt=0;
+        int total=0;
+        System.out.println("Enter a mark or -1 to exit:");
+        mark=sc.nextInt();
+        while (mark!=-1) {
+            cnt++;
+            total=total+mark;
+            System.out.println("Enter a mark or -1 to exit:");
+            mark=sc.nextInt();	
+        }
+        if (cnt!=0)
+            System.out.print("average of the numbers entered is: " + (total/cnt)  );
+        System.out.println();
+		
+  } 
+}

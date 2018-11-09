@@ -1,0 +1,42 @@
+ import java.util.Scanner;
+
+
+public class a_17_If_example{
+
+  public static void main (String[] arg){
+	 // variables 
+    String output="";
+    int mark;
+
+	// input 
+    Scanner myInp = new Scanner(System.in);   
+    System.out.print("Enter your mark: ");
+    mark = myInp.nextInt();
+	/*
+	"Excellent"; 71-100
+	"OK work";51-70
+	"Better luck next time";  <50
+ 
+	*/
+	// decision - making part
+    if (mark <0 ||  mark>100){
+	 output="Error. The number can not be less then 0 or greater then 100.";
+    }
+    else if (mark<50){   //or you can use: mark>=0 && mark<50
+	 output="Better luck next time";
+    }
+    else if (mark<=70){ 
+	 output="OK work";
+    }	 
+    else{
+	 output="Excellent";
+    }
+	//output
+    System.out.print(output +"\n\n\n");
+	
+    myInp.close();
+        
+  }//main end
+
+
+}//class end

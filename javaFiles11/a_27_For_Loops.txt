@@ -1,0 +1,71 @@
+/*Mrs S
+ICS3U
+For Loops Examples
+*/
+
+class For_Loops {
+
+	public static void main (String args[]) {
+	
+		//Example 1 - prints the numbers from 1 to 10 inclusive
+		
+		System.out.println("Example 1");
+		for (int i = 1; i <=10; i++) {
+			System.out.print(i + " ");
+		}
+
+		  
+		System.out.println("");
+		System.out.println("--------------------------------");
+		System.out.println("");
+		
+		//Example 2 - prints out multiples of 3
+		
+		System.out.println("Example 2");
+		for (int i = 1; i <=10; i++)
+			System.out.print(i*3 + " ");
+			
+		System.out.println("");
+		System.out.println("--------------------------------");
+		System.out.println("");
+		
+		
+		//Example 3 - counts down from 100 to 90, inclusive
+		
+		System.out.println("Example 3");
+		for (int i = 100; i >= 90; i--)	{
+			System.out.println(i);
+		}		
+		
+		System.out.println("");
+		System.out.println("--------------------------------");
+		System.out.println("");
+		
+		//Example 4 - prints 1, 4, 7, 10, so on till 28
+
+		System.out.println("Example 4");
+		for (int i = 1; i <= 30; i+=3)	{
+			System.out.print(i + " ");
+		}		
+		
+		System.out.println("");
+		System.out.println("--------------------------------");
+		System.out.println("");
+		
+		//Example 5 - prints powers of 3 as doubles (due to Math.pow), i.e 3.0, 9.0, 27.0, 81.0..
+		System.out.println("Example 5");
+		for (int i = 1; i <= 10; i++)	{
+			System.out.print(Math.pow(3,i)+ " ");
+		}		
+		
+		System.out.println("");
+		System.out.println("--------------------------------");
+		System.out.println("");
+		
+		
+		
+
+		
+	}
+	
+} 

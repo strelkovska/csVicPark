@@ -1,0 +1,41 @@
+// moving rectangle and oval on a screen 
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class FrameWithTimer extends JFrame implements ActionListener {
+
+   private Timer myTimer;
+   int x=50, y=50;
+
+               //constructor
+   public FrameWithTimer(String title) {
+        super(title);
+        myTimer = new Timer(120, this ); 
+        myTimer.start();
+   }
+
+   public void paint( Graphics g ){
+      super.paint( g );
+	  g.drawRect(x,y,200,50);
+	  g.drawOval(x+100,y,100,100);
+	  
+   }
+
+   public void actionPerformed( ActionEvent e ){         // is called every interval
+       y++;
+       repaint();
+   }
+
+  
+
+    public static void main( String args[] ){
+      FrameWithTimer app = new FrameWithTimer("Timer tester");
+      app.setSize(300,300);
+      app.setDefaultCloseOperation( app.EXIT_ON_CLOSE );
+      app.setVisible(true);
+
+   }
+}
+

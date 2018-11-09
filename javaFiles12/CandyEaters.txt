@@ -1,0 +1,91 @@
+// CandyEaters which uses BoxOfCandies class.
+
+
+class CandyEaters{
+   public static void main(String [] args){
+      BoxOfCandies b1=new BoxOfCandies();  //default value
+		
+      System.out.println("----------------------------------");
+      System.out.println(b1.getName()  );
+      System.out.println(b1.toString()   );
+      b1.giveACandy();
+      b1.giveSeveralCandies(4);
+      b1.giveSeveralCandies(20);
+      System.out.println(b1.toString()   );
+      System.out.println("----------------------------------");
+		
+      BoxOfCandies b2 =  new BoxOfCandies(70, "Huge box");
+      System.out.println("You have " + BoxOfCandies.numObjectsCreated + " boxes");
+      System.out.println(b2.getName()   );
+      System.out.println(b2.toString()   );
+      b1.giveSeveralCandies(4);
+      b2.giveSeveralCandies(9);
+      System.out.println(b1.getName()  );
+      System.out.println(b1.toString()  );
+      System.out.println("----------------------------------");
+      b2.giveSeveralCandies(4);
+      b2.giveACandy();
+      System.out.println(b2.getName()  );
+      System.out.println(b2.toString()  );
+      BoxOfCandies b3 = new BoxOfCandies();
+      System.out.println("You have " + BoxOfCandies.numObjectsCreated + " boxes");
+      b2.giveSeveralCandies(130);
+
+   }// end of main
+}  // end of CandyEaters class
+
+
+class BoxOfCandies{
+           //  variables
+      private int candiesTotal;
+      private int candiesLeft;
+      private String name;
+      public static int numObjectsCreated=0;
+	
+         //constructors
+      public BoxOfCandies(){
+	candiesTotal=15;
+	candiesLeft=15;
+	name="Simple box of Candies";
+	numObjectsCreated++;
+	                  //this(15,"Simple box of Candies");    // some default values 
+      }
+      public BoxOfCandies(int candiesT, String n){
+	candiesTotal=candiesT;
+	candiesLeft=candiesT;
+	name=n;
+	numObjectsCreated++;
+      }
+	
+	      // methods 
+      public void giveACandy(){
+	giveSeveralCandies(1);
+      }
+      public void giveSeveralCandies(int num){
+	if (candiesLeft-num<0)
+	   System.out.println("Sorry, you want to take more then you have left. You have left " + candiesLeft + " candies");
+	else
+           candiesLeft=candiesLeft-num;	
+	}
+	public String getName(){
+	   return name;
+	}
+
+      public String toString(){
+	String out="";
+	out=out+"-------\n|";
+	for(int i =1; i<=candiesTotal; i++){
+	  if (i<=candiesLeft)
+	    out=out+"o";
+	  else
+	    out=out+".";
+				
+	  if (i%5==0 )
+             out=out+"|\n|";
+					
+	}// end of for loop
+	out=out+"\n-------";
+	return out;
+      }
+
+}// end of class BoxOfCandies

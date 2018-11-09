@@ -1,0 +1,42 @@
+// creates an array of fonts and use them to print several words Java
+
+import java.awt.*;
+import javax.swing.*;
+
+public class FontDemo2 extends JFrame {
+
+   Font fontList[] = new Font[5];
+   Color colorList[]= {Color.red, Color.blue, Color.green,   
+                          Color.magenta, new Color(195,40,80)  };
+   int x=50, y=50;
+   String msg="Java";
+			   //constructor
+   public FontDemo2(String title) {
+        super(title);
+       
+	fontList[0] = new Font("Serif", Font.BOLD, 14);
+        fontList[1] = new Font("SansSerif", Font.BOLD + Font.ITALIC, 24);
+        fontList[2] = new Font("Monospaced", Font.PLAIN, 30);
+        fontList[3] = new Font("Dialog", Font.PLAIN, 36);
+        fontList[4] = new Font("Serif", Font.ITALIC, 48);
+    }
+	  
+   public void paint( Graphics g ){
+      super.paint( g );
+      for(int i=0; i<5;i++){
+	   g.setColor(colorList[i]);
+	   g.setFont(fontList[i]);
+	   g.drawString(msg,x,y+i*40);
+      }
+    }	  
+	  
+	  
+	  
+    public static void main( String args[] ){
+      FontDemo2 app = new FontDemo2("Another Font tester ");
+      app.setSize(300,230);
+      app.setDefaultCloseOperation( app.EXIT_ON_CLOSE );
+      app.setVisible(true);
+
+   }
+}

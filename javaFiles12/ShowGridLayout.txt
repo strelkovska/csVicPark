@@ -1,0 +1,36 @@
+
+// Demonstrate using GridLayout
+
+import javax.swing.*;
+import java.awt.*;
+
+public class ShowGridLayout extends JFrame {
+  Container c;
+  int num=12;
+  JButton btnArr[] = new JButton[num]; 
+	 
+  /** Default constructor */
+  public ShowGridLayout() {
+         // Get the content pane of the frame
+     c = getContentPane();
+
+        // Set GridLayout, 4 rows, 3 columns, and gaps 15  and 25 between
+        // components horizontally and vertically
+     c.setLayout(new GridLayout(3, 4, 15, 25));
+
+       // Add buttons to the frame
+     for (int i = 0; i < num; i++){
+        btnArr[i]=new JButton("Button " + (i+1));
+        c.add(btnArr[i]); 
+     }	
+  }
+
+  /** Main method */
+  public static void main(String[] args) {
+    ShowGridLayout frame = new ShowGridLayout();
+    frame.setTitle("Show GridLayout");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(500, 200);
+    frame.setVisible(true);
+  }
+}

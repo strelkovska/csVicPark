@@ -1,0 +1,51 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class a_43_MethodDemo_00{
+     
+  public static void main(String[] arg){
+
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number");
+    int input=sc.nextInt();
+    System.out.println("Enter a message");
+    String res=sc.nextLine();
+    res=sc.nextLine();
+
+    displayMessage();
+    displayLine(55);
+    displayRect(7,5,'*');
+    displayRect(input,input,'?');
+    displayMessage(res); //method overloading. 	 //The same name, different signature.
+    sc.close();
+    System.exit(0);
+  }//end main
+
+  public static void displayMessage(){
+    System.out.println("Hi!");
+  }//sayHi
+
+  public static void displayLine( int num ){
+    String line = "";
+    for ( int i=0; i&lt;num; i++ ){
+       line = line + "*";
+    }
+    System.out.println(line);
+  }
+
+  public static void displayRect( int width, int length, char ch ){
+    String rect = "";
+
+    for ( int i=0; i&lt;width; i++ ){
+       for ( int j=0; j&lt;length; j++ )
+          rect = rect + ch;
+       rect = rect + "\n";
+    }
+    System.out.println(rect);
+  }
+
+  public static void displayMessage(String message){
+    System.out.println(message);
+  }    //sayBye
+
+}   //end class

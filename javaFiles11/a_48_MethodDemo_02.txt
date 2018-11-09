@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class a_48_MethodDemo_02{
+    public static void main(String[] arg){
+
+	int input = takeInput();
+	displayRect(input,input,'#');
+        String res = numCharInRect(input);
+	displayMessage(res); 		   
+
+        System.exit(0);
+    }//end main
+	
+    public static void displayMessage(String message){
+	System.out.println(message);
+    }    
+
+    public static int takeInput(){
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter a number");
+	int input=sc.nextInt();
+	sc.close();
+    	return (input);     //returns the integer res to the method
+		                  //from wich the current method has been called
+
+                          //In Java a method can not return more than one datum
+    }    //takeInput 
+
+    public static String numCharInRect(int input){
+	return ("" + (input*input) );
+    }    //takeInput 
+
+    public static void displayRect( int width, int length, char ch ){
+	String rect = "";
+
+        for ( int i=0; i&lt;width; i++ ){
+            for ( int j=0; j&lt;length; j++ )
+		rect = rect + ch;
+	    rect = rect + "\n";
+        }
+	System.out.println(rect);
+    }
+
+}   //end class

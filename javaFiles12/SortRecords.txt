@@ -1,0 +1,55 @@
+<pre><code>
+import java.util.*;
+public class SortRecords{
+   public static void main(String[] args){
+      ArrayList&lt;Record&gt; arr= new ArrayList&lt;Record&gt;();
+      Record r1= new Record("ICS3U", 87, "Tom");
+      arr.add(r1);
+      arr.add(new Record("ICS3U", 100, "Sam"));
+      arr.add(new Record("TEJ3M_01", 89, "Kim"));
+      arr.add(new Record("ICS3U", 99, "Anna"));
+      arr.add(new Record("ICS3U", 100, "Adam"));
+      arr.add(new Record("TEJ3M_01", 35, "Steve"));
+      arr.add(new Record("ICS3U", 89, "Arshum"));
+      arr.add(new Record("ICS3U", 89, "Chris"));
+      arr.add(new Record("TEJ3M_01", 99, "Bob"));
+      arr.add(new Record("TEJ3M_01", 99, "Zhen"));
+      arr.add(new Record("ICS3U", 90, "Tim"));
+      System.out.print(" " +arr);
+
+      Collections.sort(arr);
+
+      System.out.println("----------sorted-------------");
+      System.out.print(" " +arr);
+   
+   }
+}
+class Record implements Comparable&lt;Record&gt;{
+  String name, course;
+  int mark;
+  
+  public Record(String cl,  int m, String n){
+      name=n;
+      course=cl;
+      mark=m;
+  }
+  public String toString(){
+    return (course + space(20-course.length()) + mark + space(20-(""+mark).length())+ name + space(20-name.length())+"\n");
+  }
+  public static String space(int n){
+    String sp="";
+    for(int i=0; i&lt; n; i++)
+       sp+=" ";	
+    return sp;
+  }
+  public int compareTo(Record other){
+    if (course!=other.course)
+      return course.compareTo(other.course);
+    else	
+      if (mark!=other.mark)
+      	return other.mark-mark;
+      else
+      	return name.compareTo(other.name);
+  }
+}
+</code></pre>

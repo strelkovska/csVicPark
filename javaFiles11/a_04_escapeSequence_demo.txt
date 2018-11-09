@@ -1,0 +1,18 @@
+/* Ms Strelkovska's demo escapeSequence
+ 5/02/2013
+ For ICS3U class Ms Strelkovska
+ file name in pick up folder a_04_escapeSequence_demo.java
+*/
+
+
+public class a_04_escapeSequence_demo{
+    public static void main(String [] args){
+
+		System.out.println("Hello \nWorld!!!");
+		System.out.println("  C:\\\\newFile\\text.txt  ");  // two \\ - will print one \ and \t - tab
+		System.out.println("\n\n\n\n");                     // 4 new lines
+		System.out.println("We say \"Go DMCI programmers Go!!\" ");
+    }
+}
+	
+	

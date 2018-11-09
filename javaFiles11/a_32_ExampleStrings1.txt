@@ -1,0 +1,44 @@
+/*ExampleStrings1
+  Oct 28,2010
+Ms. Strelkovska
+*/
+
+import java.util.Scanner;
+
+
+
+public class ExampleStrings1{
+  public static void main (String[] args){
+    String in, out, letter;
+    int len;
+    Scanner sc = new Scanner(System.in); 
+    System.out.println("Enter something");
+    in=sc.nextLine();
+               // this code will replace first and last letter in the word
+    len=in.length();
+    System.out.println("The length of the word is: " + len);
+
+    String first=in.substring(0,1);     // first letter
+    String mid=in.substring(1,len-1);    // middle part of the word
+    String last=in.substring(len-1);    // last letter
+
+    out= last+mid+first;
+    System.out.println("first-last switch: " + out);
+		
+		//this code capitalize first letter in the word in
+    letter=in.substring(0,1);    // take the first letter
+    letter=letter.toUpperCase();     // capitalize it and assign back to the same variable
+    out=letter+in.substring(1);
+		
+    System.out.println("first letter capitalazed: " + out);
+
+    sc.close();
+  } 
+}
+
+/*       
+	   // this code will replace letter with index 2 and 5 in the word enterd by the user
+        out=in.substring(0,2)+in.substring(5,6)+in.substring(3,5)+in.substring(2,3)+in.substring(6);
+		System.out.println("new string (letter with index 2 and 5 are switched) is: " + out);
+		
+		*/

@@ -1,0 +1,52 @@
+/* this demo shows how to apply some file methods
+Created by Ms Strelkovsa
+2013
+*/
+
+import java.io.*;
+import java.util.Date;
+
+
+public class FilesDemo {
+
+
+	public static void main(String[] args) {
+
+           File myDir= new File("H:/javaDemo"); 
+           File myFile= new File(myDir,"aaa.txt"); 
+      		
+           File myFile2= new File("bb.txt");
+        
+           try{
+              boolean b=myFile2.createNewFile();
+              System.out.println("created successfully");
+           }
+           catch(IOException ioe){
+	      System.out.println(ioe.toString());
+           }
+           catch(Exception e){
+	      System.out.println(e.toString());
+           }
+              
+           if  (!( myFile.exists()))
+               System.out.println("File1 does not exist");
+           else
+	       System.out.println("File1 exists");
+		
+           System.out.println("1 Absolute path: " + myFile.getAbsolutePath() );
+           System.out.println("1 Path: " + myFile.getPath() );
+           System.out.println("1 Last Modified: " + new Date(myDir.lastModified()) );
+           System.out.println("1 Parent: " + myFile.getParent() );
+           
+           System.out.println("________________________________"); 
+
+           System.out.println("2 Absolute path: " + myFile2.getAbsolutePath() );
+           System.out.println("2 Path: " + myFile2.getPath() );
+           System.out.println("2 Parent: " + myFile2.getParent() );
+	}
+	 
+		        
+		        
+	
+}
+

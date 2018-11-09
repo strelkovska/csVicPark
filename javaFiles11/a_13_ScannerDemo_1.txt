@@ -1,0 +1,27 @@
+/* Ms Strelkovska's demo Scanner
+   This demo asks the user for their name, year they were born in, and then calculates their age in 2013
+   For ICS3U class Ms Strelkovska
+*/
+
+import java.util.Scanner;
+
+class ScannerDemo_1	{
+   public static void main (String args[])	{
+	int year, age;
+	String name;
+		
+	Scanner in = new Scanner (System.in);
+		
+	System.out.println("Enter a name: ");
+	name = in.nextLine();
+		
+	System.out.println("Enter the year you were born: ");
+	year = in.nextInt();
+		
+	System.out.println("Hello " + name);
+	age = 2013 - year;
+	System.out.println("In 2013 you should be " + age);
+	
+	in.close();
+   }
+}

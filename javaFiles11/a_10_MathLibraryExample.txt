@@ -1,0 +1,89 @@
+
+
+public class MathLibraryExample {
+
+  public static void main(String[] args) {
+    
+	int i = 7;
+	int j = -9;
+	double x = 7.235e2;
+	double y = -3.34;
+  
+		// Printing the values
+	System.out.println("i is " + i);     
+	System.out.println("j is " + j);
+	System.out.println("x is " + x);     
+	System.out.println("y is " + y);
+	System.out.println("");
+		
+		// The absolute value of a number is equal to 
+		// the number if the number is positive or 
+		// zero and equal to the negative of the number 
+		// if the number is negative.
+	 
+	System.out.println("|" + i + "| is " + Math.abs(i));     
+	System.out.println("|" + j + "| is " + Math.abs(j));
+	System.out.println("|" + x + "| is " + Math.abs(x));     
+	System.out.println("|" + y + "| is " + Math.abs(y));
+	System.out.println("");
+
+
+		// sqrt(x) returns the square root of x.
+        System.out.println("The square root of " + i + " is " + Math.sqrt(i));
+	
+	System.out.println("");
+				
+		// pow(x, y) returns the x raised 
+		// to the yth power.
+	System.out.println("pow(2, 2) is "  + Math.pow(2,2));
+	System.out.println("pow(10.0, 4) is " + Math.pow(10.0,4));
+	System.out.println("pow(100.0, 0.5) is " + Math.pow(100.0,0.5));
+	System.out.println("pow(8, -1) is "     + Math.pow(8,-1));
+	System.out.println("");
+
+		
+		// The "ceiling" of a number is the   
+		// smallest integer greater than or equal to
+		// the number. Every integer is its own 
+		// ceiling.
+	System.out.println("The ceiling of " + i + " is " + Math.ceil(i));     
+	System.out.println("The ceiling of " + j + " is " + Math.ceil(j));
+	System.out.println("The ceiling of " + x + " is " + Math.ceil(x));     
+	System.out.println("The ceiling of " + y + " is " + Math.ceil(y));
+	System.out.println("");
+
+		 // The "floor" of a number is the largest  
+		 // integer less than or equal to the number.
+		 // Every integer is its own floor.
+	System.out.println("The floor of " + i + " is " + Math.floor(i));     
+	System.out.println("The floor of " + j + " is " + Math.floor(j));
+	System.out.println("The floor of " + x + " is " + Math.floor(x));     
+	System.out.println("The floor of " + y + " is " + Math.floor(y));
+	System.out.println("");
+
+		 // Comparison operators
+
+		 // min() returns the smaller of the two arguments you pass it
+	System.out.println("min(" + i + "," + j + ") is " + Math.min(i,j));     
+	System.out.println("min(" + x + "," + y + ") is " + Math.min(x,y));     
+	System.out.println("min(" + i + "," + x + ") is " + Math.min(i,x));     
+	System.out.println("min(" + y + "," + j + ") is " + Math.min(y,j));
+	System.out.println("");
+
+		 // There's a corresponding max() method 
+		 // that returns the larger of two numbers 
+	System.out.println("max(" + i + "," + j + ") is " + Math.max(i,j));     
+	System.out.println("max(" + x + "," + y + ") is " + Math.max(x,y));     
+	System.out.println("max(" + i + "," + x + ") is " + Math.max(i,x));     
+	System.out.println("max(" + y + "," + j + ") is " + Math.max(y,j));
+	System.out.println("");
+		  
+		 // The Math library defines a couple 
+		 // of useful constants, for our course we will only deal with PI:
+	System.out.println("Pi is " + Math.PI);
+	System.out.println("");
+      
+
+
+    }
+}

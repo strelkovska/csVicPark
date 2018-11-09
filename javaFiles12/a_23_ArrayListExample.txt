@@ -1,0 +1,63 @@
+
+import java.util.*; 
+ 
+public class a_23_ArrayListExample { 
+ 
+    public static void main(String[] args) { 
+ 
+        ArrayList<String> myArr = new ArrayList<String>();
+        myArr.add("11");
+        myArr.add("22");
+        myArr.add("33");
+        myArr.add("44");
+        myArr.add("55");
+        myArr.add("66");
+        myArr.add("77");
+        myArr.add("88");
+        myArr.add("99");
+        String str = "oneMoreString";
+		
+        myDisplay(myArr);
+		
+        myArr.add("extra");
+        myDisplay(myArr);
+		
+        myArr.set(3,"midAdd");
+        myDisplay(myArr);
+		
+	myArr.set(3,str);
+        myDisplay(myArr);
+		
+        myArr.remove(5);
+        myDisplay(myArr);
+		
+        myArr.remove(str);
+        myDisplay(myArr);
+		
+        ArrayList<String> copyOfStringList = new ArrayList<String>();
+        copyOfStringList.addAll(myArr);
+        myDisplay(myArr);
+        System.out.println("----copy is --------------------");
+        myDisplay(copyOfStringList);
+		
+        myArr.clear();
+        myDisplay(myArr);
+		
+		// integer array list------------------------------------
+        ArrayList<Integer> intList = new ArrayList<Integer>();
+        intList.add(33);
+        intList.add(5);
+        int x=intList.get(0);
+        int result= x +  intList.get(1) ;
+        System.out.println(result);
+      }	
+
+      public static void myDisplay(ArrayList<String> myArr){
+        System.out.println("The size is: " + myArr.size());
+        System.out.println("Elements are:");
+        for(int i =0; i<myArr.size(); i++){
+            System.out.print(myArr.get(i) + "    ");
+        }
+        System.out.println("\n\n");
+      }	
+}//class end	

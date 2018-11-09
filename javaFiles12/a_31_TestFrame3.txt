@@ -1,0 +1,62 @@
+// this application displays 5 rows of 15 squares in the screen 
+// and one row of square images from the files in the folder Bricks
+// for a brick breaker game
+
+
+
+import java.awt.*; 
+import javax.swing.*;
+/**********************************************************
+*class MyFrame
+********************************************************/
+class MyFrame extends JFrame{
+  int x=70, y=70;  
+  Color myC[]={Color.BLUE,Color.RED, Color.YELLOW, Color.GRAY, Color.MAGENTA};   
+  ImageIcon pic[]= new ImageIcon[6];
+  
+  
+  public MyFrame(){
+     System.out.println("constructor");
+     pic[0] = new ImageIcon("Bricks\\blackManBr.JPG");
+     pic[1] = new ImageIcon("Bricks\\greenBr.JPG");
+     pic[2] = new ImageIcon("Bricks\\greenManBr.JPG");
+     pic[3] = new ImageIcon("Bricks\\blueBr.JPG");
+     pic[4] = new ImageIcon("Bricks\\redBr.JPG");
+     pic[5] = new ImageIcon("Bricks\\orangeBr.JPG");
+  }
+                                                               // to display your customizations to the frame. 
+  public void paint (Graphics g )  {
+         super.paint(g);
+	 x=70;
+	 y=70;
+	 for (int row=0; row<5; row++){
+	   x=70;             // starting position of x for every new row
+	   y=y+31;           // y position for every row - 31 is a size
+	   for (int col=0; col<15; col++){
+	     g.setColor(myC[row]);
+             g.fillRect(x+31*col,y,31,31);
+	     g.setColor(Color.BLACK);         // for black outline
+             g.drawRect(x+31*col,y,31,31);
+	   }
+	  }
+	  x=70;       // starting position of x for row of images
+	  y=y+31;
+	  for (int col=0; col<15; col++){
+             g.drawImage(pic[col%6].getImage(),x+31*col,y,31,31, null);
+
+	  }
+   }    // end paint
+} // end class
+
+/**********************************************************
+* class TestFrame2
+********************************************************/
+public class TestFrame3 {
+  public static void main ( String[] args )  {
+      MyFrame frame = new MyFrame();                             // construct a MyFrame object
+      frame.setSize( 600, 400 );                                             // set it to 150 wide by 100 high
+      frame.setVisible( true );                                                 // ask it to become visible
+      frame.setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
+  }            // end main
+}        // end class
+

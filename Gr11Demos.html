@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Ms Strelkovska's java webpage</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+ 
+	<script type="text/javascript" src="css/unitpngfix.js"></script>
+	
+	<script src="css/jquery.js" type="text/javascript"></script>
+		
+	<script type="text/javascript" src="css/IncludeTogle.js"></script>
+ 
+</head>
+<body onLoad="clientSideInclude('a_03', 'javaFiles11/a_03_prinln_demo.txt');
+clientSideInclude('a_04', 'javaFiles11/a_04_escapeSequence_demo.txt');
+clientSideInclude('a_05', 'javaFiles11/a_05_format_demo.txt');
+clientSideInclude('a_06', 'javaFiles11/a_06_Advanced_format_demo.txt');
+clientSideInclude('a_08', 'javaFiles11/a_08_VariablesDemo.txt');
+clientSideInclude('a_09', 'javaFiles11/a_09_TwoDigits.txt');
+clientSideInclude('a_10', 'javaFiles11/a_10_MathLibraryExample.txt');
+clientSideInclude('a_11', 'javaFiles11/a_11_RandomExample.txt');
+clientSideInclude('a_13', 'javaFiles11/a_13_ScannerDemo_1.txt');
+clientSideInclude('a_14', 'javaFiles11/a_14_ScannerDemo_2.txt');
+clientSideInclude('a_15', 'javaFiles11/a_15_ScannerDemo_3.txt');
+clientSideInclude('a_16', 'javaFiles11/a_16_ScannerDemo_4.txt');
+clientSideInclude('a_17', 'javaFiles11/a_17_InputJOpt.txt');
+clientSideInclude('a_18', 'javaFiles11/a_17_If_example.txt');
+clientSideInclude('a_19', 'javaFiles11/a_19_Switch_example.txt');
+clientSideInclude('a_20', 'javaFiles11/a_20_ExpressionsBoolean1.txt');
+clientSideInclude('a_21', 'javaFiles11/a_21_ExpressionsBoolean2.txt');
+clientSideInclude('a_23', 'javaFiles11/a_23_Nested_Structures.txt');
+clientSideInclude('a_25', 'javaFiles11/a_25_While_Loops.txt');
+clientSideInclude('a_26', 'javaFiles11/a_27_For_Loops.txt');
+clientSideInclude('a_27', 'javaFiles11/a_31_NestedForLoops.txt');
+clientSideInclude('a_28', 'javaFiles11/a_32_ExampleStrings1.txt');
+clientSideInclude('a_29', 'javaFiles11/StringGame_Example1.txt');
+clientSideInclude('a_30', 'javaFiles11/StringGame_Example2.txt');
+clientSideInclude('a_31', 'javaFiles11/a_43_MethodDemo_00.txt');
+clientSideInclude('a_32', 'javaFiles11/a_44_MethodDemo_01.txt');
+clientSideInclude('a_33', 'javaFiles11/a_48_MethodDemo_02.txt');
+clientSideInclude('a_34', 'javaFiles11/ArrayDemo.txt');
+clientSideInclude('a_35', 'javaFiles11/myLoopDemo.txt');"
+
+
+>
+
+<div class="wrap">
+ 
+    	<div class="logo"><a href="index.html"><img src="images/logo1.gif" alt="" title="" border="0" /></a></div>
+        
+        <div id="menu">
+            <ul>                                                                       
+            <li><a href="index.html">Home</a></li>
+			<li><a href="Gr12_IB.html">Gr 12 IB</a></li>
+            <li><a href="Gr12_IB_Demo.html">Gr12 IB Demo</a></li>
+            <li class="selected"><a href="#">Gr11 Demos</a></li>
+            <li><a href="Gr11Assgn.html">Gr11 Asgn</a></li>
+            <li><a href="Gr11_IB_Assgn.html">Gr11 IB Asgn</a></li>
+            <li><a href="gr12Demos.html">Gr12 Demos</a></li>
+           <!-- <li><a href="Gr12Assgn.html">Gr12 Asgn</a></li>-->
+            <li><a href="MyLinks.html">Links</a></li>
+			<li><a href="Marks.html">Marks</a></li>
+            </ul>
+        </div>
+           
+    <div class="user_icon"><img src="images/user.png" alt="" title="" border="0"/></div>
+ 
+	<div class="welcome_block">	
+	<h1>Grade 11 Examples</h1> 
+	</div>
+  
+    <div class="main_content">
+                    
+                    <div class="about">
+					<h2>First Java Application</h2><h3></h3>
+					<h4>
+					 <a  target="_blank" href="images/SoftwareInstallation.docx"> 01. Java Installation </a><br><br>
+                   </h4>
+			         <h4>
+					 <a  target="_blank" href="images/MyJava.jpg"> 02. click to see the emample </a><br><br>
+                   </h4>
+				    
+                       <h2>Print and format</h2><h3></h3>
+	
+                     
+					 	<h4 class="example_block">03. System.out.print  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_03" onclick="$('#longDescr_03, #more_03, #less_03').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_03" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_03"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_03" class="hidden" onclick="$('#longDescr_03, #more_03, #less_03').toggle(); return false;" > hide code...</a>
+		             </h4>			
+					 <br> <!----------------------------------------------->
+					 	<h4 class="example_block">04. Escape sequences &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_04" onclick="$('#longDescr_04, #more_04, #less_04').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_04" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_04"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_04" class="hidden" onclick="$('#longDescr_04, #more_04, #less_04').toggle(); return false;" > hide code...</a>
+		             </h4>			
+					 <br> <!----------------------------------------------->
+					 <h4>	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  target="_blank" href="javaFiles11/Format_handout.docx"> 05. format() handout </a><br><br>
+                   </h4><br>
+					 <h4 class="example_block">06. System.out.format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_05" onclick="$('#longDescr_05, #more_05, #less_05').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_05" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_05"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_05" class="hidden" onclick="$('#longDescr_05, #more_05, #less_05').toggle(); return false;" > hide code...</a>
+		             </h4>	
+					 <br> <!----------------------------------------------->
+					  <h4 class="example_block">07. Advanced: System.out.format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_06" onclick="$('#longDescr_06, #more_06, #less_06').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_06" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_06"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_06" class="hidden" onclick="$('#longDescr_06, #more_06, #less_06').toggle(); return false;" > hide code...</a>
+		             </h4>	
+					 
+                        <p>
+						<h2>Variables and Calculations</h2><h3></h3>
+						
+                  <h4 class="example_block">08. Simple variable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_08" onclick="$('#longDescr_08, #more_08, #less_08').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_08" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_08"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_08" class="hidden" onclick="$('#longDescr_08, #more_08, #less_08').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+                   <h4 class="example_block">09. Display digits of 2-digit number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_09" onclick="$('#longDescr_09, #more_09, #less_09').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_09" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_09"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_09" class="hidden" onclick="$('#longDescr_09, #more_09, #less_09').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+                    <h4 class="example_block">10. Using Math class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_10" onclick="$('#longDescr_10, #more_10, #less_10').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_10" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_10"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_10" class="hidden" onclick="$('#longDescr_10, #more_10, #less_10').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> 	
+					<h4 class="example_block">11. Random Numbers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_11" onclick="$('#longDescr_11, #more_11, #less_11').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_11" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_11"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_11" class="hidden" onclick="$('#longDescr_11, #more_11, #less_11').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->	
+					<h2>Input: Scanner JOptionPane</h2><h3></h3>
+                     <h4 class="example_block">12. Scanner (integer & String)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_13" onclick="$('#longDescr_13, #more_13, #less_13').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_13" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_13"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_13" class="hidden" onclick="$('#longDescr_13, #more_13, #less_13').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+<h4 class="example_block">13. Scanner (several integers)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_14" onclick="$('#longDescr_14, #more_14, #less_14').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_14" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_14"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_14" class="hidden" onclick="$('#longDescr_14, #more_14, #less_14').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+<h4 class="example_block">14. Scanner (Double and Int)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_15" onclick="$('#longDescr_15, #more_15, #less_15').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_15" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_15"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_15" class="hidden" onclick="$('#longDescr_15, #more_15, #less_15').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+<h4 class="example_block">15. Scanner (go from numbers to Strings)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_16" onclick="$('#longDescr_16, #more_16, #less_16').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_16" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_16"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_16" class="hidden" onclick="$('#longDescr_16, #more_16, #less_16').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->			
+                   <h4 class="example_block">16. JOptionPane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_17" onclick="$('#longDescr_17, #more_17, #less_17').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_17" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_17"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_17" class="hidden" onclick="$('#longDescr_17, #more_17, #less_17').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+<h2>If and Switch</h2><h3></h3>
+                     <h4 class="example_block">17. If simple Demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_18" onclick="$('#longDescr_18, #more_18, #less_18').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_18" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_18"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_18" class="hidden" onclick="$('#longDescr_18, #more_18, #less_18').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+<h4 class="example_block">18. Switch demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_19" onclick="$('#longDescr_19, #more_19, #less_19').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_19" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_19"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_19" class="hidden" onclick="$('#longDescr_19, #more_19, #less_19').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+<h4 class="example_block">19. Boolean Expressions 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_20" onclick="$('#longDescr_20, #more_20, #less_20').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_20" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_20"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_20" class="hidden" onclick="$('#longDescr_20, #more_20, #less_20').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->		
+<h4 class="example_block">20. Boolean Expressions 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_21" onclick="$('#longDescr_21, #more_21, #less_21').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_21" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_21"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_21" class="hidden" onclick="$('#longDescr_21, #more_21, #less_21').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->			
+                   <h4 class="example_block">21. Nested Structures&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_23" onclick="$('#longDescr_23, #more_23, #less_23').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_23" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_23"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_23" class="hidden" onclick="$('#longDescr_23, #more_23, #less_23').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->						
+<h2>Loops</h2><h3></h3>
+                     <h4 class="example_block">22. While Loop Demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_25" onclick="$('#longDescr_25, #more_25, #less_25').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_25" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_25"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_25" class="hidden" onclick="$('#longDescr_25, #more_25, #less_25').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->	     
+<h4 class="example_block">23. For Loop Demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_26" onclick="$('#longDescr_26, #more_26, #less_26').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_26" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_26"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_26" class="hidden" onclick="$('#longDescr_26, #more_26, #less_26').toggle(); return false;" > hide code...</a>
+		             </h4>
+					  <br> <!----------------------------------------------->	       					
+                   <h4 class="example_block">24. Simple Loops&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_35" onclick="$('#longDescr_35, #more_35, #less_35').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_35" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_35"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_35" class="hidden" onclick="$('#longDescr_35, #more_35, #less_35').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->	       					
+                   <h4 class="example_block">25. Nested For Loops&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_27" onclick="$('#longDescr_27, #more_27, #less_27').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_27" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_27"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_27" class="hidden" onclick="$('#longDescr_27, #more_27, #less_27').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->						
+<h2>Strings</h2><h3></h3>
+                     <h4 class="example_block">26. Simple string example&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_28" onclick="$('#longDescr_28, #more_28, #less_28').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_28" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_28"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_28" class="hidden" onclick="$('#longDescr_28, #more_28, #less_28').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->	     
+<h4 class="example_block">27. Reading files (vegitables or fruits)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_29" onclick="$('#longDescr_29, #more_29, #less_29').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_29" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_29"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_29" class="hidden" onclick="$('#longDescr_29, #more_29, #less_29').toggle(); return false;" > hide code...</a>
+		             </h4>
+					  <br> <!----------------------------------------------->			
+                  <h4 class="example_block">28. Pick a random word from file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_30" onclick="$('#longDescr_30, #more_30, #less_30').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_30" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_30"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_30" class="hidden" onclick="$('#longDescr_30, #more_30, #less_30').toggle(); return false;" > hide code...</a>
+		             </h4>
+					 <br><br>
+					 
+					<h2>Arrays</h2><h3></h3>
+			           <h4 class="example_block">29. Array declare/populate/print simple Demo				
+				
+					<a href="#" id="more_34" onclick="$('#longDescr_34, #more_34, #less_34').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_34" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_34"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_34" class="hidden" onclick="$('#longDescr_34, #more_34, #less_34').toggle(); return false;" > hide code...</a>
+		             </h4>
+                    <br> <!----------------------------------------------->
+					 <h4>
+					 <a  target="_blank" href="javaFiles11/a_22_Arrays_example.doc"> 30. click to see more Array examples (reverse, max, min, median, average, sort, populate) </a><br><br>
+                   </h4>
+					  <br><br>
+					 
+					 
+					 
+					 
+					 
+					 <h2>Methods</h2><h3></h3>
+					<br> <!----------------------------------------------->			
+                  <h4 class="example_block">31. Method example 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_31" onclick="$('#longDescr_31, #more_31, #less_31').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_31" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_31"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_31" class="hidden" onclick="$('#longDescr_31, #more_31, #less_31').toggle(); return false;" > hide code...</a>
+		             </h4> 
+					 
+					 <br> <!----------------------------------------------->			
+                  <h4 class="example_block">32. Method example 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_32" onclick="$('#longDescr_32, #more_32, #less_32').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_32" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_32"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_32" class="hidden" onclick="$('#longDescr_32, #more_32, #less_32').toggle(); return false;" > hide code...</a>
+		             </h4>
+			<br> <!----------------------------------------------->			
+                  <h4 class="example_block">33. Method example 02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+				
+					<a href="#" id="more_33" onclick="$('#longDescr_33, #more_33, #less_33').toggle(); return false;" > show code...</a>
+					 <span id="longDescr_33" class ="hidden">
+ 
+					 <div class="file"><pre><span id="a_33"></span></pre></div>
+                    </span>
+                    <a href="#" id="less_33" class="hidden" onclick="$('#longDescr_33, #more_33, #less_33').toggle(); return false;" > hide code...</a>
+		             </h4>		 
+					 
+					 
+					  <br> <!----------------------------------------------->			
+                  <h4 class="example_block">34. More Method Examples
+			        
+					 <a  target="_blank" href="javaFiles11/a_46_ExamplesMethods.doc"> click to see the emample </a><br><br>
+                   </h4>
+
+        </p>
+		<p><!--
+						<h2>Input</h2>
+  
+                      <h4 class="example_block" href="" >Scanner&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" > show code...</a><br></h4>
+					  <h4 class="example_block" href="" >JOptionPane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" > show code...</a><br></h4>
+                      <h4 class="example_block" href="" >Using Math class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" > show code...</a><br></h4>
+          -->
+        </p>
+                    </div> 
+ 
+                
+                
+                
+ 
+            
+            
+            <div class="right_content">
+					<!--h2>Grade 11 Announcements</h2>
+                    
+                    <div class="news_block">
+                    <h4><a href="#">Coming soon... </a></h4>
+                    <p>
+                    <img src="images/news_icon.gif" alt="" title="" border="0" class="thumb" />
+                    Coming soon... </p>
+                    </div>
+                    
+                    
+                    <div class="news_block">
+                    <h4><a href="#">Coming soon...</a></h4>
+                    <p>
+                    <img src="images/news_icon.gif" alt="" title="" border="0" class="thumb" />
+                    Coming soon... </p>
+                    </div-->    
+              <!--      
+                    <h2>Featured projects</h2>
+           
+            		<a href="#"><img src="images/project1.jpg" alt="" title="" border="0" class="project" /></a>
+                    <a href="#"><img src="images/project2.jpg" alt="" title="" border="0" class="project" /></a> 
+                    <a href="#"><img src="images/project3.jpg" alt="" title="" border="0" class="project" /></a> 
+                    <a href="#"><img src="images/project2.jpg" alt="" title="" border="0" class="project" /></a> 
+                    <a href="#"><img src="images/project1.jpg" alt="" title="" border="0" class="project" /></a> 
+                    <a href="#"><img src="images/project3.jpg" alt="" title="" border="0" class="project" /></a>    
+            -->
+            </div>
+            
+            
+            <div class="clear"></div>
+    </div><!--End of main_content-->
+ 
+    
+</div><!--End of wrap-->
+ 
+<div class="footer">
+	<div class="footer_content">
+    
+    	<!--<div class="left_footer_content">-->
+ <div class="footer_links">
+            <span class="brown">                      <p>  </p></span>            
+
+        
+        </div>
+    <!--
+        <div class="footer_links">
+        	<h2>Friends</h2>
+            <ul>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer_network">
+        	<h2>Network</h2>
+        <a href="#" target="_blank"><img src="images/rss_48.gif" alt="" title="" border="0" /></a>
+        <a href="#" target="_blank"><img src="images/digg_48.gif" alt="" title="" border="0" /></a>
+        <a href="#" target="_blank"><img src="images/sumbleupon_48.gif" alt="" title="" border="0" /></a>
+        <a href="#" target="_blank"><img src="images/reddit_48.gif" alt="" title="" border="0" /></a>
+        <a href="#" target="_blank"><img src="images/technorati_48.gif" alt="" title="" border="0" /></a>
+        <a href="#" target="_blank"><img src="images/delicious_48.gif" alt="" title="" border="0" /></a>
+        <a href="#" target="_blank"><img src="images/twitter_boxed_48.gif" alt="" title="" border="0" /></a>
+        
+        
+        <a href="http://csstemplatesmarket.com" target="_blank"><img src="images/csstemplatesmarket.gif" alt="" title="" border="0" class="csstemplatesmarket" /></a>        
+        </div>
+        -->
+	</div>
+</div><!--End of footer-->
+ 
+ 
+ 
+</body>
+</html>

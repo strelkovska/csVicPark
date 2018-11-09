@@ -1,0 +1,27 @@
+// prints word Java using special font: SansSerif bold size 24
+import java.awt.*;
+import javax.swing.*;
+
+public class FontDemo1 extends JFrame {
+   int x=50, y=50;
+   String msg;               
+			   //constructor
+   public FontDemo1(String title) {
+     super(title);
+     msg="Java";
+   }
+	  
+   public void paint( Graphics g ){
+      super.paint( g );
+	 g.setColor( new Color(10,100,200) );
+	 g.setFont(new Font("SansSerif", Font.BOLD, 24));
+	 g.drawString(msg,x,y);
+    }	  
+	  
+    public static void main( String args[] ){
+      FontDemo1 app = new FontDemo1("Font tester");
+      app.setSize(300,100);
+      app.setDefaultCloseOperation( app.EXIT_ON_CLOSE );
+	 app.setVisible(true);
+   }
+}

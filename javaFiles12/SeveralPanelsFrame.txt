@@ -1,0 +1,92 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+/*******************************************
+/*This example show how to set up several panels in one 
+/*frame. Container has a Border layout, to set up
+/*panels in North, Center, and South parts of the frame.
+/* Panels has own layouts for thier elements. 
+/*
+*******************************************/
+
+public class SeveralPanelsFrame extends JFrame{
+   private JLabel l1;
+   private JLabel l2;
+   private JLabel l3;
+   private JLabel l4;
+   private JLabel l5;
+  
+   private JButton b1;
+   private JButton b2;
+   private JButton b3;
+
+  
+   private Container c;
+   private JPanel p1;
+   private JPanel p2;
+   private JPanel p3;
+                           // constructor
+   public SeveralPanelsFrame()   {
+
+      super("Several Panels in one Frame");
+
+      c = getContentPane();       // create a container
+      p1 = new JPanel();          // create panels
+      p2 = new JPanel();
+      p3 = new JPanel();
+      
+      c.setLayout( new BorderLayout(0,10) );  // 0 and 10 - distnances between panels
+    
+      c.add(p1, BorderLayout.NORTH );    // panel p1 is in the North
+      p1.setLayout(new FlowLayout());    // inside p1 FlowLayout will set up elements
+      p1.setBackground(Color.red);
+      l1 = new JLabel( "Points:        ");       // create lables
+      l2 = new JLabel( "Label 2");
+      l3 = new JLabel( "Label 3");
+      l4 = new JLabel( "Label 4");
+      p1.add(l1);                         // add labels to the panel
+      p1.add(l2); 
+      p1.add(l3); 
+      p1.add(l4); 
+      
+      c.add(p2, BorderLayout.CENTER );      // panel p2 will be set up in the centre
+      p2.setBackground(Color.orange);
+      p2.setLayout(null);                   // inside p2 there is no layout-manual set up
+      l5 = new JLabel( "Label 5");
+      
+      p2.add(l5);                          // add label to the panel
+
+
+
+      c.add(p3, BorderLayout.SOUTH );
+      p3.setLayout(new GridLayout(1,3));
+      p3.setBackground(Color.blue);
+      b1 = new JButton( "Button 1");
+      b2 = new JButton( "Button 2");
+      b3 = new JButton( "Button 3");
+      p3.add(b1); 
+      p3.add(b2); 
+      p3.add(b3); 
+
+
+      setSize(300,300);
+      setVisible(true);
+	   
+      setDefaultCloseOperation ( WindowConstants.EXIT_ON_CLOSE );
+
+  }// end constructor
+  public void paint(Graphics g){
+     super.paint(g);    
+     l5.setSize(80,20);                   // label 5 is set up manually
+     l5.setLocation(50,100);
+     g.setColor(Color.green);
+     g.fillRect(180,100,100,100);
+
+   }
+
+   public static void main(String[] args){
+     SeveralPanelsFrame spf = new SeveralPanelsFrame();
+
+   }// end main
+   
+}// end class

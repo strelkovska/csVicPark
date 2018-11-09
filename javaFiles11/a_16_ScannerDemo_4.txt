@@ -1,0 +1,28 @@
+/* Ms Strelkovska's demo Scanner
+   This demo asks the user for an integer, and their last name.
+   It then prints the information in reverse order
+   For ICS3U class Ms Strelkovska
+*/
+
+import java.util.Scanner;
+
+class ScannerDemo_4	{
+   public static void main (String args[])	{
+	int num;
+	String name;
+		
+	Scanner inSc = new Scanner (System.in);
+		
+	System.out.print("Please enter an integer: ");
+	num = inSc.nextInt();
+		
+	System.out.print("Please enter you last name: ");
+	name = inSc.nextLine();
+	name = inSc.nextLine();
+	
+	System.out.println("The last name is: " + name);
+	System.out.println("The number is: " + num);
+		
+	inSc.close();
+  }
+}

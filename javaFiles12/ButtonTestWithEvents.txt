@@ -1,0 +1,85 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class ButtonTestWithEvents extends JFrame implements ActionListener{
+
+   private JLabel label;
+   private JTextField textFl1, textFl2;
+   private JButton plainButton, fancyButton;
+
+
+   public ButtonTestWithEvents()   {
+      super( "Testing Action Listener" );
+
+      Container c = getContentPane();
+      c.setLayout( new FlowLayout() );
+
+ 
+      Icon ic = new ImageIcon ( "ani_cat.gif");
+
+      label = new JLabel();
+      label.setText( "A label with an icon and a text at the bottom" );
+      label.setIcon( ic );
+      label.setHorizontalTextPosition(SwingConstants.CENTER );
+      label.setVerticalTextPosition(SwingConstants.BOTTOM );
+      label.setToolTipText( "This is a label" );
+      c.add( label );
+
+
+      JLabel plainLabel1 = new JLabel("=====================");
+      c.add(plainLabel1); 
+
+      // create text fields
+      textFl1 = new JTextField(20);
+      c.add(textFl1);
+      textFl1.addActionListener(this);
+	  
+      textFl2 = new JTextField(20);
+      textFl2.setEditable(false);
+      c.add(textFl2);
+
+      JLabel plainLabel2 = new JLabel("===============================");
+      c.add(plainLabel2); 
+
+      // create buttons
+      plainButton = new JButton( "Plain Button" );
+      c.add( plainButton );
+      plainButton.addActionListener(this);
+      plainButton.setActionCommand("x");
+	  
+	  
+      Icon cat = new ImageIcon( "rightDown.gif" );
+      Icon bat = new ImageIcon( "rightRollover.gif" );
+      fancyButton = new JButton( "Fancy Button", cat );
+      fancyButton.setRolloverIcon( bat );
+      c.add( fancyButton );
+      fancyButton.addActionListener(this);
+      fancyButton.setActionCommand("y");
+   }
+   public void actionPerformed(ActionEvent ae){ 
+      if (ae.getSource()==textFl1){
+         System.out.println("Click!");
+         JTextField ctf=(JTextField)ae.getSource();	
+         System.out.println(ctf.getText());
+         ctf.setText("");	
+      }
+      else{
+         JButton btn=(JButton)ae.getSource();
+              // or ae.getSource()==plainButton
+         if (btn.getActionCommand().equals("x"))
+             System.out.println("Plain Click!");
+         else if (btn.getActionCommand().equals("y"))
+             System.out.println("Fancy Click!");
+      }
+   }
+   public static void main( String args[] ){ 
+       ButtonTestWithEvents app = new ButtonTestWithEvents();
+       app.setDefaultCloseOperation ( WindowConstants.EXIT_ON_CLOSE );
+       app.setSize( 310, 350 );
+       app.setVisible(true);
+   }
+
+
+}//end of GUI class
+

@@ -1,0 +1,55 @@
+/*
+ * ICSU3 Array Demonstration
+ * 
+ * ArrayDemo application
+ * Created by Ross Leroux
+ * Fall 2012
+ */
+ 
+
+import java.util.Scanner;
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int []numbers = new int [3];
+		double []reals = new double [5];
+		
+		numbers[1]=7;    // numbers array ->0 7 0
+		reals[2]= Math.PI;    // numbers array ->0.0  0.0  3.141593  0.0  0.0  
+		
+           // print values of numbers array
+		System.out.println("Array numbers:");
+		for( int i=0; i&lt;numbers.length; i++)
+			System.out.print(numbers[i]+" ");
+		System.out.println("\n\n");	
+		
+           // print values of reals array				
+		System.out.println("Array reals:");
+		for( int i=0; i&lt;reals.length; i++)
+			System.out.print(reals[i]+" ");
+		System.out.println("\n\n");	
+				
+		int []num ={3,15,33,44,55,66,77,88,6,0};
+		double []dec = new double [10];
+
+
+           // populate with random numbers
+		for (int i=0; i&lt;dec.length;  i++){
+		    double tmp=Math.random()*10;
+			dec[i]= Math.round(tmp*100)/100.0;
+		}
+		System.out.println("Array num:");
+		for (int i=0; i&lt;num.length; i++)
+			System.out.print(num[i]+"   ");  // Array num:
+		System.out.println("\n\n");		     // 3 15 33 44 55 66 77 88 6 0
+		
+		System.out.println("Array dec:");		
+		for (int i=0; i&lt;dec.length; i++)
+			System.out.print(dec[i]+"   ");// Array dec:
+		System.out.println("\n\n");		     // 1.55 8.02 9.29 0.27 5.42 8.66 3.11 2.95 6.02 9.06
+
+		
+	}
+}

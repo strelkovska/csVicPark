@@ -1,0 +1,38 @@
+/* Ms Strelkovska's demo Scanner
+   This demo ask th eusers for Integers, a String, a double, and a character
+   5/02/2013
+   For ICS4U class Ms Strelkovska
+   file name in pick up folder a_03_InputScanner.java
+*/
+
+ import java.util.Scanner;  // import this to use Scanner
+ 
+ public class a_03_InputScanner{
+    public static void main (String[] arg){
+	  
+	double dblNum=0;
+	String input="";
+	int num1=0, num2=0, num3 = 0;
+	char ch;
+	Scanner inp = new Scanner(System.in);   
+
+	System.out.print("Enter 3 integers ");
+	num1 = inp.nextInt();
+	num2 = inp.nextInt();
+	num3 = inp.nextInt();
+		
+	System.out.print("Enter the name ");
+	input=inp.nextLine();   // to delete newLine character and go to the new line to read name
+	input=inp.nextLine();
+		
+	System.out.print("Enter a number ");
+	dblNum=inp.nextDouble();
+	
+	System.out.print("Enter a character ");
+	inp.nextLine();         // to delete newLine character after reading double 
+	ch=inp.nextLine().charAt(0);
+	System.out.print("You have Entered " +  num1 + "   " +num2 + "   " + num3 + "   "+ input + 
+		                   "    "  + dblNum + "the character is " + ch);
+	inp.close();
+   }
+}

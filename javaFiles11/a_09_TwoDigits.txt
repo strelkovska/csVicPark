@@ -1,0 +1,25 @@
+/* Ms Strelkovska's demo two digits
+   This demo display digits or 2-digit number
+   5/02/2013
+   For ICS3U class Ms Strelkovska
+   file name in pick up folder a_09_TwoDigits.java
+*/
+public class a_09_TwoDigits{
+    public static void main (String args[]) {
+	  // variables
+	int d1;
+	int d2=0;
+		
+	int num = 47;
+		
+	  //calculation	
+	d1=num/10;
+		
+	   //you can use this formula: d2=num-d1*10;
+	   // or this formula:
+	 d2=num%10;
+		
+	  // display results
+	 System.out.println("First digit is " + d1 + " Second digit is " + d2);
+    } 
+}

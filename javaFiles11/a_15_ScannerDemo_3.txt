@@ -1,0 +1,30 @@
+/* Ms Strelkovska's demo Scanner
+   This demo asks the user for the price of a photocopy, and the number of copies they want.
+   It then calculates the total cost for the user
+   For ICS3U class Ms Strelkovska
+*/
+
+import java.util.Scanner;
+
+class ScannerDemo_3	{
+   public static void main (String args[])	{
+	double price;
+	int copies;
+	double total = 0;
+		
+	Scanner myInp = new Scanner (System.in);
+		
+	System.out.print("Please enter a price per copy: ");
+	price = myInp.nextDouble();
+		
+	System.out.print("Please enter the number of copies: ");
+	copies = myInp.nextInt();
+		
+	total = price*copies;
+	total = Math.round(total*100)/100.0;
+		
+	System.out.println("You should pay " + total);
+		
+	myInp.close();
+   }
+}

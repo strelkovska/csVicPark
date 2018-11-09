@@ -1,0 +1,42 @@
+// ShowManualPosition.java: Demonstrate how to manually position components
+
+import javax.swing.*;
+import java.awt.*;
+
+public class ShowManualPosition extends JFrame {
+  
+
+  JButton btn1 ,btn2;
+      /**  constructor */
+  public ShowManualPosition() {
+        // Get the content pane of the frame
+    Container container = getContentPane();
+
+       // Set FlowLayout, aligned left with horizontal gap 30
+       // and vertical gap 40 between components
+    container.setLayout(null);
+    btn1 = new JButton("Button 1");
+    btn2 = new JButton("Button 2");
+
+    container.add( btn1);
+    container.add( btn2);
+
+  }
+
+  public void paint(Graphics g){
+    super.paint(g);
+    btn1.setLocation (20, 40);
+    btn1.setSize (200, 30) ;
+    btn2.setLocation (120, 140);
+    btn2.setSize (100, 20) ;
+  }// end paint 	  
+  
+  public static void main(String[] args) {
+    ShowManualPosition frame = new ShowManualPosition();
+    frame.setTitle("Show FlowLayout");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(800, 240);
+    frame.setVisible(true);
+  } // end main
+
+}// end class

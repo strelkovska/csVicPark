@@ -1,0 +1,50 @@
+/* Ms Strelkovska's Advanced  demo format()
+   This demo is for advanced students. 
+   You need to understand variables and imports to use it.
+   5/02/2013
+   For ICS3U class Ms Strelkovska
+   file name in pick up folder a_02_FormatExample.java
+*/
+import java.util.Calendar;
+
+public class a_02_FormatExample{
+    public static void main(String [] args){
+
+	System.out.print("Hello World!!!");
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	double a = 23.55;
+	int b=33;
+	String str="Java";
+	System.out.format("The value of the float variable is %f, while the value of the integer 
+                            variable is %d and the string is %s %n", a, b, str); 
+
+	long n = 461012;
+    
+	System.out.format("%d  %n", n);       //  -->  "461012"
+	System.out.format("%08d   %n", n);       //  -->  "00461012"
+
+	double pi = Math.PI;
+
+	System.out.format("%f  %n", a);       // -->  "23.550000"
+	System.out.format("%f  %n", pi);       // -->  "3.141593"
+     
+	System.out.format("%.4f   %n", a);        // -->  "23.5500"
+	System.out.format("%.3f  %n", pi);      // -->  "3.142"
+      
+	Calendar c = Calendar.getInstance();
+ 
+	System.out.format("%tB %te, %tY   %n", c, c, c);     // -->  "February 7, 2012"
+	System.out.format("%tl:%tM %tp    %n", c, c, c);     // -->  "5:34 pm"
+	  
+	System.out.format("%tD%n", c);                   // -->  "02/07/12"
+	  
+	System.out.format("the number is %10d. The date is %te and the year is %ty and the number 
+                           with decimal point is %f", 22, c, c, 44.0);
+    }
+}
+
+				
+	

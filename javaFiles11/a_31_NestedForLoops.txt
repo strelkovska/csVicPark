@@ -1,0 +1,43 @@
+/*Mrs S
+ICS3U
+Nested For Loops
+*/
+import java.util.Scanner;
+
+class a_31_NestedForLoops {
+
+   public static void main (String args[]) {
+		
+	/*Using nested for loops to print
+		       4
+		     3 4
+		   2 3 4
+		 1 2 3 4
+	*/
+	for(int j=4; j>= 1; j--) {	
+	  for(int i = 1; i <= 4; i++) {
+	    if(j-i > 0)
+	      System.out.print("  ");
+	    else 
+	      System.out.print(i+" ");
+	  }
+	  System.out.println("");
+	}
+	
+		//Using temporary variable (result) to compute the 
+		//first few terms of the Fibonacci sequence
+	System.out.println("\n\n-------------");
+        int num1 = 1;
+	int num2 = 2;
+	int result = 0;
+		
+	for (int i = 1; i <=5; i++) {
+	   result = num1 + num2;
+	   System.out.println(result);
+	   num1 = num2;
+	   num2 = result;
+	}
+		
+   }
+
+}	

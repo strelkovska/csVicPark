@@ -1,0 +1,14 @@
+// displays empty window with a size of 200x100
+
+import java.awt.*;            // 1. import the application windowing toolkit
+import javax.swing.*;       // 2. import the Swing classes
+
+public class TestFrame1{                          // usual main() method 
+  public static void main ( String[] args )   {
+        JFrame frame = new JFrame("Test Frame 1");      // 3. construct a JFrame object
+         frame.setSize(200,100);                                  // 4. set it to 200 pixels wide by 100 high
+         frame.setVisible( true );                                     // 5. ask it to become visible on the screen
+         frame.setDefaultCloseOperation ( WindowConstants.EXIT_ON_CLOSE );   
+                                                                                                              // 6. say what the close button does
+    }         // end main                                                                             
+  }          // end TestFrame1

@@ -1,0 +1,81 @@
+/*Mrs S
+ICS3U
+*/
+class a_23_Nested_Structures {
+
+	public static void main (String args[]) {
+		
+		//Three sort using nested if statements
+		//Generating 3 random numbers between 1 and 100
+		int a = (int)(Math.random()*100+1);
+		int b = (int)(Math.random()*100+1);
+		int c = (int)(Math.random()*100+1);
+		int max = 0;
+		int middle = 0;
+		int min = 0;
+		
+		//Prining the 3 numbers we generated
+		System.out.println("The three numbers are " + a + " " + b + " " + c + " " );
+		
+		//Ordering number using if-else statements
+		if (a > b) { //a is bigger than b
+			if (b > c) { //b is bigger than c 
+				max = a;
+				middle = b;
+				min = c;
+			}else { // c is bigger than b
+				if (a > c) { // a is bigger than c
+					max = a;
+					middle = c;
+					min = b;
+				} else { //a is bigger than b, but not c
+					max = c;
+					middle = a;
+					min = b;
+				}
+			}
+		} else { //b is bigger than a
+			if (a > c) { //a is bigger than c but less than c
+				min = c;
+				middle = a;
+				max = b;
+			}else { //a is less than c
+				if (b > c) { //b is bigger c
+					min = a;
+					middle = c;
+					max = b;
+				}else { //b is less than c but bigger than a
+					min = a;
+					middle = b;
+					max = c;
+				}
+			}
+		}
+
+		//Print the order from lowest to highest for user
+		System.out.println("The numbers in order are: " + min + " " + middle + " " + max);
+		
+		
+		System.out.println ("\n\n\n\n");
+		
+		//Combining switches and ifs
+		int x = 15;
+		
+		switch(x) {
+			case 15:  System.out.println("Hello World"); 
+				  if (x%2 == 0){
+				      System.out.println("I am even");
+				  }
+                                  else {
+				      System.out.println("I am not even");
+				  }
+				  break;
+			default:  System.out.println("wrong input"); break;
+			
+			
+			
+		}
+		
+  }
+
+}  

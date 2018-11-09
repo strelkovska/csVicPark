@@ -1,0 +1,54 @@
+/* this program asks the use for two integers and displays the result of their division
+we use try and catch blocks to display error messages
+Created by Ms Strelkovska
+Feb 27 2014
+*/
+
+import java.util.*;
+
+public class ExceptionDemo2{
+ 
+
+    public static void main(String arg[]){
+   
+     
+      Scanner input=new Scanner(System.in);
+      String str_in;
+      int num1, num2;
+
+      System.out.print("Enter two numbers (or -1 to exit)");
+      str_in=input.nextLine();
+	  
+      while(!(str_in.equals("-1"))){
+       	 int spaceInd= str_in.indexOf(" ");
+	     
+	 try{ 
+             num1=Integer.parseInt(str_in.substring(0,spaceInd));
+             num2=Integer.parseInt(str_in.substring(spaceInd+1));
+		  
+             System.out.println(num1+"/"+num2 + " = " +num1/num2);
+         }  
+         catch(NumberFormatException nfe){
+             System.out.print("\nError: Not numeric data or decimals entered");
+         }
+         catch(StringIndexOutOfBoundsException se){
+	      System.out.print("\nError: Wrong input format. You should enter 2 integers separated by space");
+         }
+         catch(ArithmeticException ae){  
+	      System.out.print("\nError: division by zero");
+         }
+		
+         catch(Exception e){   // all other possible exceptions which we did not catch above
+           System.out.print("Error"+e);
+         }
+         System.out.print("\n\nEnter two numbers (or -1 to exit)");
+         str_in=input.nextLine();
+       }// end of while loop
+	
+        
+       System.out.println("\n\nGood Bye"); 
+		
+  }//main
+}//class
+
+

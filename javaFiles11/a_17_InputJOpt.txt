@@ -1,0 +1,40 @@
+// JOptionPane input example
+/* Ms Strelkovska's demo
+ 5/02/2013
+ For ICS3U class Ms Strelkovska
+ file name in pick up folder a_05_InputJOpt.java
+*/
+
+import javax.swing.JOptionPane;       // import class JOptionPane
+
+public class a_17_InputJOpt {
+   public static void main( String args[] ){
+      String str_input;           // to store string entered by user
+
+      int number1;
+      double number2, sum;             
+  
+                            // read in first number from user as a string
+      str_input = JOptionPane.showInputDialog( "Enter first integer" );
+
+                             // convert the number from type String to type int
+      number1 = Integer.parseInt( str_input ); 
+
+                             // read in second number from user as a string
+      str_input = JOptionPane.showInputDialog( "Enter second number" );
+
+                            // convert the number from type String to type int
+
+      number2 = Double.parseDouble( str_input );
+
+                            // add the numbers
+      sum = number1 + number2;
+
+                           // display the results
+      JOptionPane.showMessageDialog(null, "The sum is " + sum, "Results",JOptionPane.PLAIN_MESSAGE );
+      JOptionPane.showMessageDialog(null, "The sum is " + sum, "INFORMATION",JOptionPane.INFORMATION_MESSAGE );
+      JOptionPane.showMessageDialog(null, "The sum is " + sum, "WARNING",JOptionPane.WARNING_MESSAGE );
+      JOptionPane.showMessageDialog(null, "The sum is " + sum, "QUESTION",JOptionPane.QUESTION_MESSAGE );
+      System.exit( 0 );   // terminate the program
+   }
+}

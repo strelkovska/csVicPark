@@ -1,0 +1,85 @@
+/*Mrs S
+ICS3U
+While Loops Examples
+*/
+import java.util.Scanner;
+
+class While_Loops {
+
+	public static void main (String args[]) {
+		
+		//While loop to list a few multiples of 10
+		int count = 1;
+		while (count <= 7) {
+			System.out.print(count*10 + " ");
+			count++;
+		}
+		
+		System.out.println();
+		System.out.println("----------------------------------------------");
+		System.out.println();
+		
+		//While loop to list a few multiples of 10
+		count = 1;
+		while (count <= 7)
+			System.out.print(count++*10 + " ");
+
+		System.out.println();
+		System.out.println("----------------------------------------------");
+		System.out.println();
+		
+		//While loop to count from 100 to 90 by decrement of 1
+		count = 100;
+		while (count > 89) {
+			System.out.print(count + " ");
+			count--;
+		}
+		
+		System.out.println();
+		System.out.println("----------------------------------------------");
+		System.out.println();
+		
+		
+		//While loop to check for a pin number from the user
+		boolean right = false;
+		int input;
+		Scanner myScanner = new Scanner(System.in);
+		
+		while(!right) {
+			System.out.print("Enter your 4 digit pin number: ");
+			input = myScanner.nextInt();
+			if (input == 1234) {
+				System.out.println("Pin Number Accepted");
+				right = true;
+			} 
+                        else {
+				System.out.println("Invalid Pin Number");
+			}
+		}
+		
+		System.out.println("What would you like to do today?");	
+		
+		System.out.println();
+		System.out.println("----------------------------------------------");
+		System.out.println();		
+
+		System.out.print("Enter your 4 digit pin number: ");
+		input = myScanner.nextInt();
+		
+		while(input != 1234) {
+			System.out.println("Invalid Pin Number");
+			System.out.print("Enter your 4 digit pin number again: ");
+			input = myScanner.nextInt();
+
+		}
+
+		System.out.println("Pin Number Accepted");
+		System.out.println("What would you like to do today?");	
+		
+		myScanner.close();
+		
+		
+	}
+	
+} 
+

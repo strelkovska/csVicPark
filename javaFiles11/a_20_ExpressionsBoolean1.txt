@@ -1,0 +1,29 @@
+public class a_20_ExpressionsBoolean1 {
+	public static void main(String[] args) {
+		int x = 79, y = 46, z = -3;
+		double d = 13.89, e = 40.0;
+		boolean b = true, c = false;		
+
+		System.out.println(true && false);    //false
+
+		System.out.println(true && !false);   //true
+		
+		System.out.println(c || (d > 0));    //true
+		
+		System.out.println(!b || c);         //false
+		
+		System.out.println((x > 102) && true );    //false
+		
+		System.out.println((e == 1) || false );    //false
+		
+		System.out.println((e == 40) && !false );    //true
+		
+		System.out.println(x != 3);    //true
+	
+		System.out.println(!(x!=3));    //false
+		
+		System.out.println(!!true);    //true
+	
+	}
+
+}

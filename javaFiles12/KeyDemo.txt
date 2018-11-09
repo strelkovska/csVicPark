@@ -1,0 +1,57 @@
+/************************************************
+/*  The following program will draw a filled circular region of 
+/*  radius 10 pixels at any point at which the mouse is clicked 
+/*
+/*************************************************/
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class MouseCircles extends JFrame implements MouseListener {
+   private int x, y;
+   private static final int RADIUS = 10;
+   private Container c;
+   private boolean blnStart = true;  
+   //----constructor-------------------------------------------
+   public MouseCircles(){
+      super( "Mouse Dropping" );
+               // application listens to its own mouse events
+      addMouseListener( this );
+      c=getContentPane();
+      c.setLayout(new FlowLayout());
+      c.setBackground(new Color(125, 0, 0));
+      setSize( 300, 300 );
+      setVisible(true);
+   }
+
+   // MouseListener event handlers
+   public void mouseClicked( MouseEvent e ){
+      x= e.getX();
+      y= e.getY();
+      blnStart=false;
+      repaint();
+   }
+
+   public void mousePressed( MouseEvent e ){   }
+   public void mouseReleased( MouseEvent e ){   }
+   public void mouseEntered( MouseEvent e ) {   }
+   public void mouseExited( MouseEvent e )  {   }
+
+   public void paint(Graphics g){
+      if (blnStart) 
+          super.paint(g);
+	  
+      g.setColor(Color.magenta);                                                                                                     
+      g.fillOval(x-RADIUS, y-RADIUS, 2*RADIUS, 2*RADIUS);
+
+   }// end paint
+   
+   public static void main( String args[] )   { 
+      MouseCircles app = new MouseCircles();
+      app.setDefaultCloseOperation ( WindowConstants.EXIT_ON_CLOSE );
+   }
+   
+
+
+} // end class
+

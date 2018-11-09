@@ -1,0 +1,19 @@
+/* Ms Strelkovska's demo format()
+ 5/02/2013
+ For ICS3U class Ms Strelkovska
+ file name in pick up folder a_05_format_demo.java
+*/
+
+
+public class a_05_format_demo{
+    public static void main(String [] args){
+
+	System.out.format("%-15s %7s %10s %11s %n","Team","Wins","Losses", "Next Step");
+	System.out.format("%-15s %7s %10s %11s %n","Bruins","7","2", "Yes");
+	System.out.format("%-15s %7s %10s %11s %n","Vanier viking","1","8", "No");
+	System.out.format("%-15s %7s %10s %11s %n","ECI Ram","5","5", "Yes");
+	
+    }
+}
+	
+	

@@ -1,0 +1,44 @@
+
+// Demonstrate using BorderLayout
+
+
+import javax.swing.*;
+import java.awt.*;
+
+public class ShowBorderLayout extends JFrame {
+  Container cont;
+  JButton btn_e,btn_s,btn_w,btn_n,btn_c;
+	
+	
+	
+  /** Default constructor */
+  public ShowBorderLayout() {
+        // Get the content pane of the frame
+    cont = getContentPane();
+
+    // Set BorderLayout with horizontal gap 5 and vertical gap 10
+    cont.setLayout(new BorderLayout(5, 10));
+   
+    btn_e=new JButton("East");
+    btn_s=new JButton("South");
+    btn_w=new JButton("West");
+    btn_n=new JButton("North");
+    btn_c=new JButton("Center");
+	
+    // Add buttons to the frame
+    cont.add(btn_e, BorderLayout.EAST);
+    cont.add(btn_s, BorderLayout.SOUTH);
+    cont.add(btn_w, BorderLayout.WEST);
+    cont.add(btn_n, BorderLayout.NORTH);
+    cont.add(btn_c, BorderLayout.CENTER);
+  }
+
+  /** Main method */
+  public static void main(String[] args) {
+    ShowBorderLayout frame = new ShowBorderLayout();
+    frame.setTitle("Show BorderLayout");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(300, 200);
+    frame.setVisible(true);
+  }
+}

@@ -1,0 +1,78 @@
+// randomly displays a lot of rectangles, or circles, or lines 
+// change the picture every 4 seconds
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class RandomArtTimer extends JFrame implements ActionListener {
+
+   private Timer myTimer;
+               //constructor
+   public RandomArtTimer(String title) {
+        super(title);
+        myTimer = new Timer(4000, this ); 
+        myTimer.start();
+   }
+
+   public void paint( Graphics g ){
+      super.paint( g );
+	  // The next four lines will fill the entire panel with gray
+      int c=(int)(256*Math.random());
+      Color randomGray = new Color(c,c,c);
+      g.setColor(randomGray);
+      g.fillRect( 0, 0, getWidth(), getHeight() );
+      
+      int artType = (int)(3*Math.random());
+
+      switch (artType) {   // lines
+      case 0:
+         for (int i = 0; i < 500; i++) {
+            int x1 = (int)(getWidth() * Math.random());
+            int y1 = (int)(getHeight() * Math.random());
+            int x2 = (int)(getWidth() * Math.random());
+            int y2 = (int)(getHeight() * Math.random());
+            Color randomHue = Color.getHSBColor( (float)Math.random(), 1.0F, 1.0F);
+            g.setColor(randomHue);
+            g.drawLine(x1,y1,x2,y2);
+         }
+         break;
+      case 1:
+         for (int i = 0; i < 200; i++) {   // circles
+            int centerX =  (int)(getWidth() * Math.random());
+            int centerY = (int)(getHeight() * Math.random());
+            Color randomHue = Color.getHSBColor( (float)Math.random(), 1.0F, 1.0F);
+            g.setColor(randomHue);
+            g.drawOval(centerX - 50, centerY - 50, 100, 100);
+         }
+         break;
+      case 2:
+         for (int i = 0; i < 25; i++) {  // rectangels
+            int centerX =  (int)(getWidth() * Math.random());
+            int centerY = (int)(getHeight() * Math.random());
+            int size = 30 + (int)(170*Math.random());
+            Color randomColor = new Color( (int)(256*Math.random()), 
+                  (int)(256*Math.random()), (int)(256*Math.random()) );
+            g.setColor(randomColor);
+            g.fill3DRect(centerX - size/2, centerY - size/2, size, size, true);
+         }
+         break;
+      }
+	  
+   }
+
+   public void actionPerformed( ActionEvent e ){         // is called every interval
+	   repaint();
+   }
+
+  
+
+    public static void main( String args[] ){
+      RandomArtTimer app = new RandomArtTimer("Random Art tester");
+      app.setSize(300,300);
+      app.setDefaultCloseOperation( app.EXIT_ON_CLOSE );
+      app.setVisible(true);
+
+   }
+}
+

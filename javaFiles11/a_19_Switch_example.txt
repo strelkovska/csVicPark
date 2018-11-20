@@ -40,7 +40,7 @@ public class a_14_Switch_example{
 	  switch (mark){
 
 		case 'A': 
-		case 'a' : System.out.print("Exellent"); break;
+		case 'a' : System.out.print("Excellent"); break;
 		case 'B': 
 		case 'b' : System.out.print("Good"); break;
 		case 'C': 

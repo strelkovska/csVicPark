@@ -4,12 +4,12 @@ public class a_21_ExpressionsBoolean2 {
 		double c = 2345.19, v = 157.03;
 		boolean a = false, s = true;		
 
-		boolean gus = (x > 0) && (c == v);
+		boolean gus = (x &gt; 0) && (c == v);
 		System.out.println(!gus);      //true
 
 		System.out.println(a||s);       //true
 
-		System.out.println(((-1 * x) > 0) && !a);       //true
+		System.out.println(((-1 * x) &gt; 0) && !a);       //true
 
 		boolean r = z == x;
 		System.out.println(r || false);      //false

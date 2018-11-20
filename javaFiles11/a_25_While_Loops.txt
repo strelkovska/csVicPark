@@ -10,7 +10,7 @@ class While_Loops {
 		
 		//While loop to list a few multiples of 10
 		int count = 1;
-		while (count <= 7) {
+		while (count &lt;= 7) {
 			System.out.print(count*10 + " ");
 			count++;
 		}
@@ -21,7 +21,7 @@ class While_Loops {
 		
 		//While loop to list a few multiples of 10
 		count = 1;
-		while (count <= 7)
+		while (count &lt;= 7)
 			System.out.print(count++*10 + " ");
 
 		System.out.println();
@@ -30,7 +30,7 @@ class While_Loops {
 		
 		//While loop to count from 100 to 90 by decrement of 1
 		count = 100;
-		while (count > 89) {
+		while (count &gt; 89) {
 			System.out.print(count + " ");
 			count--;
 		}

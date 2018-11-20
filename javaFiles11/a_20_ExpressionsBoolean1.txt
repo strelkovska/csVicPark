@@ -8,7 +8,7 @@ public class a_20_ExpressionsBoolean1 {
 
 		System.out.println(true && !false);   //true
 		
-		System.out.println(c || (d > 0));    //true
+		System.out.println(c || (d &gt; 0));    //true
 		
 		System.out.println(!b || c);         //false
 		

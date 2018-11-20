@@ -18,13 +18,13 @@ class a_23_Nested_Structures {
 		System.out.println("The three numbers are " + a + " " + b + " " + c + " " );
 		
 		//Ordering number using if-else statements
-		if (a > b) { //a is bigger than b
-			if (b > c) { //b is bigger than c 
+		if (a &gt; b) { //a is bigger than b
+			if (b &gt; c) { //b is bigger than c 
 				max = a;
 				middle = b;
 				min = c;
 			}else { // c is bigger than b
-				if (a > c) { // a is bigger than c
+				if (a &gt; c) { // a is bigger than c
 					max = a;
 					middle = c;
 					min = b;
@@ -35,12 +35,12 @@ class a_23_Nested_Structures {
 				}
 			}
 		} else { //b is bigger than a
-			if (a > c) { //a is bigger than c but less than c
+			if (a &gt; c) { //a is bigger than c but less than c
 				min = c;
 				middle = a;
 				max = b;
 			}else { //a is less than c
-				if (b > c) { //b is bigger c
+				if (b &gt; c) { //b is bigger c
 					min = a;
 					middle = c;
 					max = b;

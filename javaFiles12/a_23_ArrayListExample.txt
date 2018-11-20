@@ -5,7 +5,7 @@ public class a_23_ArrayListExample {
  
     public static void main(String[] args) { 
  
-        ArrayList<String> myArr = new ArrayList<String>();
+        ArrayList&ltString&gt myArr = new ArrayList&ltString&gt();
         myArr.add("11");
         myArr.add("22");
         myArr.add("33");
@@ -34,7 +34,7 @@ public class a_23_ArrayListExample {
         myArr.remove(str);
         myDisplay(myArr);
 		
-        ArrayList<String> copyOfStringList = new ArrayList<String>();
+        ArrayList&ltString&gt copyOfStringList = new ArrayList&ltString&gt();
         copyOfStringList.addAll(myArr);
         myDisplay(myArr);
         System.out.println("----copy is --------------------");
@@ -44,7 +44,7 @@ public class a_23_ArrayListExample {
         myDisplay(myArr);
 		
 		// integer array list------------------------------------
-        ArrayList<Integer> intList = new ArrayList<Integer>();
+        ArrayList&ltInteger&gt intList = new ArrayList&ltInteger&gt();
         intList.add(33);
         intList.add(5);
         int x=intList.get(0);
@@ -52,10 +52,10 @@ public class a_23_ArrayListExample {
         System.out.println(result);
       }	
 
-      public static void myDisplay(ArrayList<String> myArr){
+      public static void myDisplay(ArrayList&ltString&gt myArr){
         System.out.println("The size is: " + myArr.size());
         System.out.println("Elements are:");
-        for(int i =0; i<myArr.size(); i++){
+        for(int i =0; i&lt myArr.size(); i++){
             System.out.print(myArr.get(i) + "    ");
         }
         System.out.println("\n\n");

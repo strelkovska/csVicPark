@@ -15,21 +15,21 @@ public class a_17_If_example{
 	/*
 	"Excellent"; 71-100
 	"OK work";51-70
-	"Better luck next time";  <50
+	"Better luck next time";  &lt;50
  
 	*/
 	// decision - making part
-    if (mark <0 ||  mark>100){
+    if (mark &lt;0 ||  mark&gt;100){
 	 output="Error. The number can not be less then 0 or greater then 100.";
     }
-    else if (mark<50){   //or you can use: mark>=0 && mark<50
+    else if (mark&lt;50){   //or you can use: mark&gt;=0 && mark&lt;50
 	 output="Better luck next time";
     }
-    else if (mark<=70){ 
+    else if (mark&lt;=70){ 
 	 output="OK work";
     }	 
     else{
-	 output="Excellent";
+	 output="Excellent"; 
     }
 	//output
     System.out.print(output +"\n\n\n");

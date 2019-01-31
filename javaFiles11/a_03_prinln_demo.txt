@@ -1,15 +1,15 @@
 /* Ms Strelkovska's demo println()
- 5/02/2013
+ 1/02/2019
  For ICS3U class Ms Strelkovska
- file name in pick up folder a_03_prinln_demo.java
+
 */
 
 public class a_03_prinln_demo{
     public static void main(String [] args){
 	  System.out.print("Hello ");
-	  System.out.print("World!!!");   // will print Hello World!!! in one line
+	  System.out.print("World!!!");   <font color="green">// will print Hello World!!! in one line</font>
 		
-		//more printing
+		<font color="green">//more printing</font>
 	  System.out.println();
 	  System.out.println("The number is: " + 5);
 	  System.out.println("20 + 32.94 is:");

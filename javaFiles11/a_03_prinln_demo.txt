@@ -1,8 +1,8 @@
-/* Ms Strelkovska's demo println()
+<font color="green">/* Ms Strelkovska's demo println()
  1/02/2019
  For ICS3U class Ms Strelkovska
 
-*/
+*/</font>
 
 public class a_03_prinln_demo{
     public static void main(String [] args){

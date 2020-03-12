@@ -14,7 +14,8 @@ public class StringGame_Example222{
     static Scanner scFile=null;    <font color="green">//global variable - could be used in any method</font>
     static Scanner scan=null;    <font color="green">//global variable - could be used in any method</font>
         
-    public static void main (String[] args) throws Exception{     <font color="green">// you need to add "throws Exception" this to tell java that you don't care about the errors</font>
+    public static void main (String[] args) throws Exception{     <font color="green">// you need to add "throws Exception" this to </font>
+                                                                <font color="green">//tell java that you don't care about the errors</font>
         String secretWord ="";
         int level=0;
 
@@ -32,21 +33,23 @@ public class StringGame_Example222{
 <font color="green">//*********************************************************	</font>
 <font color="green">// method getSecretWord  parameter: level of difficulty(int), return: a random word from a file(String)</font>
 <font color="green">//*****************************************************</font>
-    public static String getSecretWord(int level)throws Exception{  <font color="green">// dont forgetto add "throws Exception" if you read file here</font> 
+    public static String getSecretWord(int level)throws Exception{  <font color="green">// dont forgetto add "throws Exception" if you</font> 
+                                                                        <font color="green">//read file here</font> 
         String wordFromFile="";
         int rndWordNum=1;
         int cnt=0;
 		
         scFile = new Scanner(new File("WordFile"+level+".txt"));      <font color="green">// read from the file instead of the screen</font>
 
-        while(scFile.hasNext()){     <font color="green">// hasNext() is a method of Scanner class. It returns true if there is something left to read.</font>
-            wordFromFile=scFile.nextLine();
+        while(scFile.hasNext()){       <font color="green">// hasNext() is a method of Scanner class. It returns true if there is </font>
+            wordFromFile=scFile.nextLine();      <font color="green">// something left to read.</font>
             cnt++;                    <font color="green">// open file and count how many line in there. </font>
         }	
 	
         System.out.println("Inside the method: There are " + cnt + " lines in the file");
 		
-        rndWordNum =(int)(Math.random()*cnt);  <font color="green">//number from 0 to cnt because I know that there are cnt words in the file</font>
+        rndWordNum =(int)(Math.random()*cnt);  <font color="green">//number from 0 to cnt because I know that there are cnt </font>
+                                                <font color="green">//words in the file</font>
 		
         scFile = new Scanner(new File("WordFile"+level+".txt"));      <font color="green">// open the file again</font>
 
@@ -57,5 +60,5 @@ public class StringGame_Example222{
         System.out.println( "Inside the method: " + wordFromFile);               
 
         return wordFromFile;
-    } <font color="green">// end of getSecretWord method</font>
+    } <font color="green">// end of getSecretWord() method</font>
 }<font color="green">// end of class</font>

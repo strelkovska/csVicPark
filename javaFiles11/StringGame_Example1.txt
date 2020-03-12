@@ -10,12 +10,12 @@ import java.io.*;
 
 public class StringGame_Example1{
     public static void main (String[] args) throws Exception{  <font color="green">// you need to add "throws Exception" </font>
-                                      <font color="green">//this to tell java that you don't care about the errors</font>
+                                                            <font color="green">//this to tell java that you don't care about the errors</font>
       String word;
       int choice;
       String fileName="";
-	  Scanner sc = null;
-	  Scanner scFile = null;
+      Scanner sc = null;
+      Scanner scFile = null;
 	  
       sc = new Scanner(System.in);   <font color="green">// to read from the screen the use choice</font>
 		

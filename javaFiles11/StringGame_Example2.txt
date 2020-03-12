@@ -10,8 +10,8 @@ import java.io.*;
 
 public class StringGame_Example2{
   public static void main (String[] args) throws Exception{     <font color="green">// you need to add "throws Exception" this to tell java </font>
-                          <font color="green">//that you don't care about the errors</font>
-      String in="";
+                                                               <font color="green">//that you don't care about the errors</font>
+      String secretWord="";
       int rndWordNum=1;
       Scanner scFile = null;
 	
@@ -19,10 +19,10 @@ public class StringGame_Example2{
       scFile = new Scanner(new File("WordFile1.txt"));      <font color="green">// read from the file instead of the screen</font>
 
       for(int i=0; i &lt; rndWordNum; i++)
-         in=scFile.nextLine();                <font color="green">//keep reading till we get to the desired line</font>
+         secretWord=scFile.nextLine();                <font color="green">//keep reading till we get to the desired line</font>
 		
       System.out.println("The number is: " + rndWordNum);   
-      System.out.println( in);               
+      System.out.println(secretWord);               
 
       scFile.close();
    } 

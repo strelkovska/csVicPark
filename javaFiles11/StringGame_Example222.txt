@@ -1,0 +1,61 @@
+<font color="green">
+/*
+In this example we choose a random word from the file "WordFile1.txt" or "WordFile2.txt" and display it on the screen
+We don't need to know how many words are in the file. We open the file first, count how many lines are there and
+use this number to generate a random number from 0 to the number
+Every time we run the programm, a random number is generated and a word is displayed
+
+*/</font>
+import java.util.Scanner;
+import java.io.*;
+
+
+public class StringGame_Example222{
+    static Scanner scFile=null;    <font color="green">//global variable - could be used in any method</font>
+    static Scanner scan=null;    <font color="green">//global variable - could be used in any method</font>
+        
+    public static void main (String[] args) throws Exception{     <font color="green">// you need to add "throws Exception" this to tell java that you don't care about the errors</font>
+        String secretWord ="";
+        int level=0;
+
+        scan= new Scanner(System.in);
+        System.out.print("Level of difficulty: Enter 1 for easy, 2 for hard version:  ");
+        level = scan.nextInt();
+		
+        secretWord= getSecretWord(level);   <font color="green">//method call</font>
+        System.out.print("\n\nPrinting in the main:   The secret word is: "+ secretWord+"\n\n");
+		
+        if(scFile!=null)
+            scFile.close();
+     }<font color="green">// end of main</font>
+	
+<font color="green">//*********************************************************	</font>
+<font color="green">// method getSecretWord  parameter: level of difficulty(int), return: a random word from a file(String)</font>
+<font color="green">//*****************************************************</font>
+    public static String getSecretWord(int level)throws Exception{  <font color="green">// dont forgetto add "throws Exception" if you read file here</font> 
+        String wordFromFile="";
+        int rndWordNum=1;
+        int cnt=0;
+		
+        scFile = new Scanner(new File("WordFile"+level+".txt"));      <font color="green">// read from the file instead of the screen</font>
+
+        while(scFile.hasNext()){     <font color="green">// hasNext() is a method of Scanner class. It returns true if there is something left to read.</font>
+            wordFromFile=scFile.nextLine();
+            cnt++;                    <font color="green">// open file and count how many line in there. </font>
+        }	
+	
+        System.out.println("Inside the method: There are " + cnt + " lines in the file");
+		
+        rndWordNum =(int)(Math.random()*cnt);  <font color="green">//number from 0 to cnt because I know that there are cnt words in the file</font>
+		
+        scFile = new Scanner(new File("WordFile"+level+".txt"));      <font color="green">// open the file again</font>
+
+        for(int i=0;i&lt;rndWordNum;i++)
+            wordFromFile=scFile.nextLine();                <font color="green">//keep reading till we get to the desired line</font>
+		
+        System.out.println("Inside the method: The random number is: " + rndWordNum); 
+        System.out.println( "Inside the method: " + wordFromFile);               
+
+        return wordFromFile;
+    } <font color="green">// end of getSecretWord method</font>
+}<font color="green">// end of class</font>

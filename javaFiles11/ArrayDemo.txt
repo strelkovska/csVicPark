@@ -14,7 +14,7 @@ public class ArrayDemo {
 		int []numbers = new int [3];       <font color="green">// declare an array of 3 integers</font>
 		double []reals = new double [5];    <font color="green">// declare an array of 5 doubles</font>
 		
-		numbers[1]=7;    <font color="green">//values of numbers array ->0  7  0</font>
+		numbers[1]=7;        <font color="green"> //values of numbers array ->0  7  0</font>
 		reals[2]= Math.PI;    <font color="green">//values of real array ->0.0   0.0   3.141593   0.0   0.0</font>  
 		
            <font color="green">// print values of numbers array</font>
@@ -45,15 +45,13 @@ public class ArrayDemo {
 		System.out.println("Array num:");
 		
 		for (int i=0; i&lt;num.length; i++)
-			System.out.print(num[i]+"   ");  <font color="green">// Array num:</font>
-		
-		System.out.println("\n\n");		     <font color="green">// 3 15 33 44 55 66 77 88 6 0</font>
+			System.out.print(num[i]+"   ");         <font color="green">// Array num:</font>
+				System.out.println("\n\n");		     <font color="green">// 3 15 33 44 55 66 77 88 6 0</font>
 		
 		System.out.println("Array dec:");
 		
 		for (int i=0; i&lt;dec.length; i++)
-			System.out.print(dec[i]+"   ");<font color="green">// Array dec:</font>
-		
+			System.out.print(dec[i]+"   ");       <font color="green">// Array dec:</font>
 		System.out.println("\n\n");		     <font color="green">// 1.55 8.02 9.29 0.27 5.42 8.66 3.11 2.95 6.02 9.06</font>
 
 		

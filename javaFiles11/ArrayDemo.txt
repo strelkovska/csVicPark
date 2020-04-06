@@ -9,22 +9,19 @@
 import java.util.Scanner;
 
 public class ArrayDemo {
-
 	public static void main(String[] args) {
-		
-		Scanner input = new Scanner(System.in);
 		
 		int []numbers = new int [3];       <font color="green">// declare an array of 3 integers</font>
 		double []reals = new double [5];    <font color="green">// declare an array of 5 doubles</font>
 		
-		numbers[1]=7;    <font color="green">// numbers array ->0 7 0</font>
-		reals[2]= Math.PI;    <font color="green">// real array ->0.0  0.0  3.141593  0.0  0.0</font>  
+		numbers[1]=7;    <font color="green">//values of numbers array ->0  7  0</font>
+		reals[2]= Math.PI;    <font color="green">//values of real array ->0.0   0.0   3.141593   0.0   0.0</font>  
 		
            <font color="green">// print values of numbers array</font>
 		System.out.println("Array numbers:");
 		
 		for( int i=0; i&lt;numbers.length; i++)
-			System.out.print(numbers[i]+" ");
+		    System.out.print(numbers[i]+" ");
 			
 		System.out.println("\n\n");	
 		
@@ -32,7 +29,7 @@ public class ArrayDemo {
 		System.out.println("Array reals:");
 		
 		for( int i=0; i&lt;reals.length; i++)
-			System.out.print(reals[i]+" ");
+		    System.out.print(reals[i]+" ");
 			
 		System.out.println("\n\n");	
 				
@@ -43,7 +40,7 @@ public class ArrayDemo {
            <font color="green">// populate with random numbers</font>
 		for (int i=0; i&lt;dec.length;  i++){
 		    double tmp=Math.random()*10;          
-			dec[i]= Math.round(tmp*100)/100.0;
+		    dec[i]= Math.round(tmp*100)/100.0;
 		}
 		System.out.println("Array num:");
 		
